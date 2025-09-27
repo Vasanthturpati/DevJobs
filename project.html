@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevJobs - MNC Tech Job Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <div class="job-board-container">
+        <!-- Top Header Section -->
+        <header class="main-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1 class="site-name">
+                        <i class="fas fa-code"></i>
+                        DevJobs
+                    </h1>
+                    <p class="site-tagline">Find your next tech opportunity at top MNCs</p>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="#" class="nav-link">Browse Jobs</a></li>
+                        <li><a href="#" class="nav-link">MNC Companies</a></li>
+                        <li><a href="#" class="nav-link post-job-btn">Post a Job</a></li>
+                        <li><a href="#" class="nav-link login-btn">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Search Bar Section -->
+        <section class="search-section">
+            <div class="search-container">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for jobs at Google, Microsoft, Amazon, Apple..." class="search-input">
+                    <button class="search-button">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- MNC Companies Showcase -->
+        <section class="mnc-showcase">
+            <div class="showcase-container">
+                <h2>Top MNC Companies Hiring Now</h2>
+                <div class="company-logos">
+                    <div class="company-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+                        <span>Google</span>
+                    </div>
+                    <div class="company-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+                        <span>Microsoft</span>
+                    </div>
+                    <div class="company-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+                        <span>Amazon</span>
+                    </div>
+                    <div class="company-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+                        <span>Apple</span>
+                    </div>
+                    <div class="company-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" alt="Meta">
+                        <span>Meta</span>
+                    </div>
+                    <div class="company-logo-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+                        <span>IBM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Filter Sidebar -->
+            <aside class="filter-sidebar">
+                <div class="filter-header">
+                    <h2>Filters</h2>
+                    <button class="clear-filters">Clear All</button>
+                </div>
+
+                <!-- Company Filter -->
+                <div class="filter-group">
+                    <h3 class="filter-title">MNC Companies</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="company" value="google">
+                            <span class="checkmark"></span>
+                            Google
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="company" value="microsoft">
+                            <span class="checkmark"></span>
+                            Microsoft
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="company" value="amazon">
+                            <span class="checkmark"></span>
+                            Amazon
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="company" value="apple">
+                            <span class="checkmark"></span>
+                            Apple
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="company" value="meta">
+                            <span class="checkmark"></span>
+                            Meta
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="company" value="ibm">
+                            <span class="checkmark"></span>
+                            IBM
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Role Filter -->
+                <div class="filter-group">
+                    <h3 class="filter-title">Job Role</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="role" value="frontend">
+                            <span class="checkmark"></span>
+                            Frontend Developer
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="role" value="backend">
+                            <span class="checkmark"></span>
+                            Backend Developer
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="role" value="fullstack">
+                            <span class="checkmark"></span>
+                            Full Stack Developer
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="role" value="devops">
+                            <span class="checkmark"></span>
+                            DevOps Engineer
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="role" value="mobile">
+                            <span class="checkmark"></span>
+                            Mobile Developer
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="role" value="data">
+                            <span class="checkmark"></span>
+                            Data Scientist
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Tech Stack Filter -->
+                <div class="filter-group">
+                    <h3 class="filter-title">Tech Stack</h3>
+                    <div class="filter-tags">
+                        <button class="tag-filter" data-tech="html">HTML</button>
+                        <button class="tag-filter" data-tech="css">CSS</button>
+                        <button class="tag-filter" data-tech="javascript">JavaScript</button>
+                        <button class="tag-filter" data-tech="react">React</button>
+                        <button class="tag-filter" data-tech="vue">Vue.js</button>
+                        <button class="tag-filter" data-tech="angular">Angular</button>
+                        <button class="tag-filter" data-tech="node">Node.js</button>
+                        <button class="tag-filter" data-tech="python">Python</button>
+                        <button class="tag-filter" data-tech="java">Java</button>
+                        <button class="tag-filter" data-tech="php">PHP</button>
+                        <button class="tag-filter" data-tech="sql">SQL</button>
+                        <button class="tag-filter" data-tech="aws">AWS</button>
+                    </div>
+                </div>
+
+                <!-- Location Filter -->
+                <div class="filter-group">
+                    <h3 class="filter-title">Location</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="radio" name="location" value="remote">
+                            <span class="radiomark"></span>
+                            Remote
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="location" value="onsite">
+                            <span class="radiomark"></span>
+                            On-site
+                        </label>
+                        <label class="filter-option">
+                            <input type="radio" name="location" value="hybrid">
+                            <span class="radiomark"></span>
+                            Hybrid
+                        </label>
+                    </div>
+                    <div class="location-input">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="City or country" class="location-search">
+                    </div>
+                </div>
+
+                <!-- Experience Level Filter -->
+                <div class="filter-group">
+                    <h3 class="filter-title">Experience Level</h3>
+                    <div class="filter-options">
+                        <label class="filter-option">
+                            <input type="checkbox" name="experience" value="intern">
+                            <span class="checkmark"></span>
+                            Internship
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="experience" value="junior">
+                            <span class="checkmark"></span>
+                            Junior (0-2 years)
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="experience" value="mid">
+                            <span class="checkmark"></span>
+                            Mid-level (2-5 years)
+                        </label>
+                        <label class="filter-option">
+                            <input type="checkbox" name="experience" value="senior">
+                            <span class="checkmark"></span>
+                            Senior (5+ years)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Salary Range Filter -->
+                <div class="filter-group">
+                    <h3 class="filter-title">Salary Range</h3>
+                    <div class="salary-range">
+                        <div class="range-values">
+                            <span class="min-value">$60k</span>
+                            <span class="max-value">$300k+</span>
+                        </div>
+                        <input type="range" min="60" max="300" value="150" class="salary-slider">
+                    </div>
+                </div>
+
+                <button class="apply-filters">Apply Filters</button>
+            </aside>
+
+            <!-- Job Listings Section -->
+            <section class="job-listings">
+                <div class="listings-header">
+                    <h2>MNC Job Opportunities <span class="job-count">(32 jobs)</span></h2>
+                    <div class="sort-options">
+                        <label for="sort-by">Sort by:</label>
+                        <select id="sort-by" class="sort-select">
+                            <option value="recent">Most Recent</option>
+                            <option value="salary">Highest Salary</option>
+                            <option value="relevant">Most Relevant</option>
+                            <option value="company">Company Name</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Job Cards Grid -->
+                <div class="job-cards-grid">
+                    <!-- Google Job Card -->
+                    <article class="job-card featured">
+                        <div class="featured-badge">Featured</div>
+                        <div class="company-badge">Google</div>
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo">
+                            </div>
+                            <div class="job-basic-info">
+                                <h3 class="job-title">Senior Software Engineer, Google Cloud</h3>
+                                <p class="company-name">Google</p>
+                            </div>
+                            <button class="save-job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="job-details">
+                            <div class="job-meta">
+                                <span class="job-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Mountain View, CA
+                                </span>
+                                <span class="job-type">
+                                    <i class="fas fa-briefcase"></i>
+                                    Full-time
+                                </span>
+                                <span class="job-salary">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    $180k - $250k
+                                </span>
+                            </div>
+                            
+                            <p class="job-description">
+                                Join Google Cloud's engineering team to build scalable infrastructure solutions. Work on cutting-edge technologies that power millions of users worldwide.
+                            </p>
+                            
+                            <div class="tech-tags">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Google Cloud</span>
+                                <span class="tech-tag">Kubernetes</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-card-footer">
+                            <span class="post-date">Posted 1 day ago</span>
+                            <button class="apply-button">Apply Now</button>
+                        </div>
+                    </article>
+
+                    <!-- Microsoft Job Card -->
+                    <article class="job-card">
+                        <div class="company-badge">Microsoft</div>
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo">
+                            </div>
+                            <div class="job-basic-info">
+                                <h3 class="job-title">Frontend Engineer - Microsoft Teams</h3>
+                                <p class="company-name">Microsoft</p>
+                            </div>
+                            <button class="save-job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="job-details">
+                            <div class="job-meta">
+                                <span class="job-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Redmond, WA
+                                </span>
+                                <span class="job-type">
+                                    <i class="fas fa-briefcase"></i>
+                                    Full-time
+                                </span>
+                                <span class="job-salary">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    $140k - $190k
+                                </span>
+                            </div>
+                            
+                            <p class="job-description">
+                                Help build the next generation of Microsoft Teams. We're looking for frontend engineers passionate about creating seamless collaboration experiences.
+                            </p>
+                            
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Azure</span>
+                                <span class="tech-tag">GraphQL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-card-footer">
+                            <span class="post-date">Posted 3 days ago</span>
+                            <button class="apply-button">Apply Now</button>
+                        </div>
+                    </article>
+
+                    <!-- Amazon Job Card -->
+                    <article class="job-card">
+                        <div class="company-badge">Amazon</div>
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+                            </div>
+                            <div class="job-basic-info">
+                                <h3 class="job-title">Software Development Engineer II - AWS</h3>
+                                <p class="company-name">Amazon Web Services</p>
+                            </div>
+                            <button class="save-job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="job-details">
+                            <div class="job-meta">
+                                <span class="job-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Seattle, WA (Remote Possible)
+                                </span>
+                                <span class="job-type">
+                                    <i class="fas fa-briefcase"></i>
+                                    Full-time
+                                </span>
+                                <span class="job-salary">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    $160k - $220k
+                                </span>
+                            </div>
+                            
+                            <p class="job-description">
+                                Join the AWS core services team to design and build distributed systems at scale. Work on services that power thousands of businesses worldwide.
+                            </p>
+                            
+                            <div class="tech-tags">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Distributed Systems</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-card-footer">
+                            <span class="post-date">Posted 2 days ago</span>
+                            <button class="apply-button">Apply Now</button>
+                        </div>
+                    </article>
+
+                    <!-- Apple Job Card -->
+                    <article class="job-card featured">
+                        <div class="featured-badge">Featured</div>
+                        <div class="company-badge">Apple</div>
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+                            </div>
+                            <div class="job-basic-info">
+                                <h3 class="job-title">iOS Engineer - Apple Music</h3>
+                                <p class="company-name">Apple</p>
+                            </div>
+                            <button class="save-job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="job-details">
+                            <div class="job-meta">
+                                <span class="job-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Cupertino, CA
+                                </span>
+                                <span class="job-type">
+                                    <i class="fas fa-briefcase"></i>
+                                    Full-time
+                                </span>
+                                <span class="job-salary">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    $150k - $200k
+                                </span>
+                            </div>
+                            
+                            <p class="job-description">
+                                Join the Apple Music team to create exceptional music experiences for millions of users. Work with cutting-edge iOS technologies and frameworks.
+                            </p>
+                            
+                            <div class="tech-tags">
+                                <span class="tech-tag">Swift</span>
+                                <span class="tech-tag">iOS</span>
+                                <span class="tech-tag">Objective-C</span>
+                                <span class="tech-tag">UIKit</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-card-footer">
+                            <span class="post-date">Posted 5 days ago</span>
+                            <button class="apply-button">Apply Now</button>
+                        </div>
+                    </article>
+
+                    <!-- Meta Job Card -->
+                    <article class="job-card">
+                        <div class="company-badge">Meta</div>
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Facebook_Logo.png" alt="Meta Logo">
+                            </div>
+                            <div class="job-basic-info">
+                                <h3 class="job-title">Product Engineer</h3>
+                                <p class="company-name">Meta</p>
+                            </div>
+                            <button class="save-job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="job-details">
+                            <div class="job-meta">
+                                <span class="job-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Menlo Park, CA (Hybrid)
+                                </span>
+                                <span class="job-type">
+                                    <i class="fas fa-briefcase"></i>
+                                    Full-time
+                                </span>
+                                <span class="job-salary">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    $170k - $240k
+                                </span>
+                            </div>
+                            
+                            <p class="job-description">
+                                Work on Instagram's core product features used by billions. We're looking for full-stack engineers passionate about building engaging social experiences.
+                            </p>
+                            
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">GraphQL</span>
+                                <span class="tech-tag">Hack</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-card-footer">
+                            <span class="post-date">Posted 4 days ago</span>
+                            <button class="apply-button">Apply Now</button>
+                        </div>
+                    </article>
+
+                    <!-- IBM Job Card -->
+                    <article class="job-card">
+                        <div class="company-badge">IBM</div>
+                        <div class="job-card-header">
+                            <div class="company-logo">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo">
+                            </div>
+                            <div class="job-basic-info">
+                                <h3 class="job-title">AI Engineer - Watson</h3>
+                                <p class="company-name">IBM</p>
+                            </div>
+                            <button class="save-job">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="job-details">
+                            <div class="job-meta">
+                                <span class="job-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Remote (US)
+                                </span>
+                                <span class="job-type">
+                                    <i class="fas fa-briefcase"></i>
+                                    Full-time
+                                </span>
+                                <span class="job-salary">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    $130k - $180k
+                                </span>
+                            </div>
+                            
+                            <p class="job-description">
+                                Join IBM Watson's AI engineering team to build enterprise-grade AI solutions. Work on natural language processing and machine learning technologies.
+                            </p>
+                            
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">NLP</span>
+                            </div>
+                        </div>
+                        
+                        <div class="job-card-footer">
+                            <span class="post-date">Posted 1 week ago</span>
+                            <button class="apply-button">Apply Now</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="page-btn disabled">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <span class="page-ellipsis">...</span>
+                    <button class="page-btn">5</button>
+                    <button class="page-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DevJobs</h3>
+                    <p>Connecting talented developers with top MNC companies since 2023.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>For Job Seekers</h4>
+                    <ul>
+                        <li><a href="#">Browse MNC Jobs</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                        <li><a href="#">Create Profile</a></li>
+                        <li><a href="#">MNC Interview Prep</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>For Employers</h4>
+                    <ul>
+                        <li><a href="#">Post a Job</a></li>
+                        <li><a href="#">Browse Candidates</a></li>
+                        <li><a href="#">MNC Hiring Solutions</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">MNC Partners</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 DevJobs. All rights reserved. | Partnered with top MNC companies worldwide</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
